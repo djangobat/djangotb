@@ -1,0 +1,23 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+Đăng xuất tài khoản
+{% endblock title %}
+{% block main %}
+<div class="col-md-8 offset-md-2 mt-6 ">
+    <div class="account-content">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-12 col-lg-6">
+                <div class="login-header mb-3">
+                    <p>Bạn có chắc muốn đăng xuất tài khoản ?</p>
+                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-danger" type="submit">Đăng xuất</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock main %}
