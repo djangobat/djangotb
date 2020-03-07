@@ -8,7 +8,7 @@ For detail:
 
 ## DEMO
 
-![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+![Demo Video](https://github.com/djangobat/djangotb/blob/master/demo.gif)
 
 ## Features
 
