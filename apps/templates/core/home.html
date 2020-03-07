@@ -16,7 +16,10 @@ DjangoTB
 <br>
 <h5 class="font-weight-light">Clone Repository</h5>
 <p>
-    <code>$git clone https://github.com/djangobat/djangotb.git</code>
+    <code>$ git clone https://github.com/djangobat/djangotb.git</code>
+</p>
+<p>
+    <code>$ cd djangotb</code>
 </p>
 <h5 class="font-weight-light">Cấu hình virtual enviroment</h5>
 <ul class="nav nav-tabs">
@@ -33,52 +36,52 @@ DjangoTB
 <div class="tab-content">
     <div class="tab-pane active container" id="windows">
         <p>
-            <code>$virtualenv env</code>
+            <code>$ virtualenv env</code>
         </p>
         <p>
-            <code>$env\Scripts\activate</code>
+            <code>$ env\Scripts\activate</code>
         </p>
         <p>
-            <code>(env)$pip install -r requirements.txt</code>
+            <code>(env) $ pip install -r requirements.txt</code>
         </p>
     </div>
     <div class="tab-pane container" id="linux">
         <p>
-            <code>$virtualenv env</code>
+            <code>$ virtualenv env</code>
         </p>
         <p>
-            <code>$source env/bin/activate</code>
+            <code>$ source env/bin/activate</code>
         </p>
         <p>
-            <code>(env)$pip install -r requirements.txt</code>
+            <code>(env) $ pip install -r requirements.txt</code>
         </p>
     </div>
     <div class="tab-pane container" id="mac">
         <p>
-            <code>$virtualenv env -p python3</code>
+            <code>$ virtualenv env -p python3</code>
         </p>
         <p>
-            <code>$source env/bin/activate</code>
+            <code>$ source env/bin/activate</code>
         </p>
         <p>
-            <code>(env)$pip install -r requirements.txt</code>
+            <code>(env) $ pip install -r requirements.txt</code>
         </p>
     </div>
 </div>
 <h5 class="font-weight-light">Khởi tạo migration của custom user</h5>
 <p>
-    <code>(env)$python manage.py makemigrations users</code>
+    <code>(env) $ python manage.py makemigrations users</code>
 </p>
 <p>
-    <code>(env)$python manage.py migrate</code>
+    <code>(env) $ python manage.py migrate</code>
 </p>
 <h5 class="font-weight-light">Tạo superuser</h5>
 <p>
-    <code>(env)$python manage.py createsuperuser</code>
+    <code>(env) $ python manage.py createsuperuser</code>
 </p>
 <h5 class="font-weight-light">Chạy server development</h5>
 <p>
-    <code>(env)$python manage.py runserver</code>
+    <code>(env) $ python manage.py runserver</code>
 </p>
 </div>
 {% endblock main %}

@@ -39,13 +39,7 @@ $ git clone https://github.com/djangobat/djangotb.git
 $ cd djangotb
 ```
 
-3. Đổi tên file .env.example thành .env
-
-```bash
-$ mv .env.example .env
-```
-
-4. Cài đặt virtual environment:
+3. Cài đặt virtual environment:
 
 * Dùng windows
 
@@ -80,6 +74,13 @@ Hoặc cài virtual environment với Pipenv:
 $ pipenv --python 3
 $ pipenv install
 $ pipenv shell
+```
+
+4. Khởi tạo migration của custom user
+
+```bash
+(env) $ python manage.py makemigrations users
+(env) $ python manage.py migrate
 ```
 
 5. Create a superuser:
