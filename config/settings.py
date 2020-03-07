@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     
     # Local
     'apps.core',
-    'apps.users',
+    'apps.users.apps.UsersConfig',
 ]
 
 SITE_ID = 1
@@ -119,7 +119,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 LOGIN_REDIRECT_URL = 'home'
-ACCOUNT_LOGOUT_REDIRECT = 'account_login'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 ACCOUNT_SESSION_REMEMBER = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_REQUIRED = False

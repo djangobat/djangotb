@@ -7,8 +7,78 @@ DjangoTB
     <h1 class="display-4">Home Page</h1>
     <p class="lead text-muted">Khởi tạo dự án Django nhanh chóng với <b>djangotb</b></p>
     <p>
-        <a href="" class="btn btn-success my-2">djangobat.com</a>
+        <a href="http://djangobat.com/" class="btn btn-success my-2">djangobat.com</a>
         <a href="https://github.com/djangobat/djangotb" class="btn btn-secondary my-2"><i class="fa fa-github-alt"></i> Code Github</a>
     </p>
+</div>
+<div class="bg-light p-3 mb-3">
+    <h2>Cài đặt</h2>
+<br>
+<h5 class="font-weight-light">Clone Repository</h5>
+<p>
+    <code>$git clone https://github.com/djangobat/djangotb.git</code>
+</p>
+<h5 class="font-weight-light">Cấu hình virtual enviroment</h5>
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#windows"><i class="fab fa-windows"></i> Windows</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#linux"><i class="fab fa-linux"></i> Linux</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#mac"><i class="fab fa-apple"></i> Mac</a>
+    </li>
+</ul>
+<div class="tab-content">
+    <div class="tab-pane active container" id="windows">
+        <p>
+            <code>$virtualenv env</code>
+        </p>
+        <p>
+            <code>$env\Scripts\activate</code>
+        </p>
+        <p>
+            <code>(env)$pip install -r requirements.txt</code>
+        </p>
+    </div>
+    <div class="tab-pane container" id="linux">
+        <p>
+            <code>$virtualenv env</code>
+        </p>
+        <p>
+            <code>$source env/bin/activate</code>
+        </p>
+        <p>
+            <code>(env)$pip install -r requirements.txt</code>
+        </p>
+    </div>
+    <div class="tab-pane container" id="mac">
+        <p>
+            <code>$virtualenv env -p python3</code>
+        </p>
+        <p>
+            <code>$source env/bin/activate</code>
+        </p>
+        <p>
+            <code>(env)$pip install -r requirements.txt</code>
+        </p>
+    </div>
+</div>
+<h5 class="font-weight-light">Khởi tạo migration của custom user</h5>
+<p>
+    <code>(env)$python manage.py makemigrations users</code>
+</p>
+<p>
+    <code>(env)$python manage.py migrate</code>
+</p>
+<h5 class="font-weight-light">Tạo superuser</h5>
+<p>
+    <code>(env)$python manage.py createsuperuser</code>
+</p>
+<h5 class="font-weight-light">Chạy server development</h5>
+<p>
+    <code>(env)$python manage.py runserver</code>
+</p>
 </div>
 {% endblock main %}
