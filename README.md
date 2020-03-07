@@ -4,7 +4,7 @@ Khởi tạo dự án Django nhanh chóng, hiệu quả.
 
 ## Blog
 
-For detail: 
+For detail: [BLOG](https://djangobat.com/blog/khoi-tao-ung-dung-django-nhanh-chong)
 
 ## DEMO
 
