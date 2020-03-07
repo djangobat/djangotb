@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+dj-database-url = "==0.5.0"
+django-allauth = "==0.41.0"
+django-crispy-forms = "==1.9.0"
+django-debug-toolbar = "==2.2"
+python-decouple = "==3.3"
+sorl-thumbnail = "==12.6.3"
+Django = "==3.0.3"
+Pillow = "==7.0.0"
+
+[requires]
+python_version = "2.7"
