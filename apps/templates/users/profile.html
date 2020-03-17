@@ -1,9 +1,15 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% load static %}
 {% block title %}
 Profile
 {% endblock title %}
+{% block css %}
+<!-- <link rel="stylesheet" href="{% static 'css/tempusdominus-bootstrap-4.min.css' %}"> -->
+<link rel="stylesheet" href="{% static 'css/datepicker.min.css' %}">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datepicker/0.6.5/datepicker.min.css" integrity="sha256-b88RdwbRJEzRx95nCuuva+hO5ExvXXnpX+78h8DjyOE=" crossorigin="anonymous" /> -->
+{% endblock css %}
 {% block main %}
 <div class="row">
     <div class="col-md-3">
@@ -20,31 +26,33 @@ Profile
     </div>
     <div class="col-md-9">
         <div class="card-body">
-                <h5 class="card-title">Thông tin cá nhân</h5>
-                <form novalidate="" method="post" action="{% url 'profile' %}">
-                    {% if is_valid %}
-                    <div class="alert alert-success">
-                        Cập nhật thành công
-                    </div>
-                    {% endif %}
-                    {% csrf_token %}
-                    <div class="form-group">
-                        {{ form.username|as_crispy_field }}
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            {{ form.first_name|as_crispy_field }}
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            {{ form.last_name|as_crispy_field }}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        {{ form.email|as_crispy_field }}
-                    </div>
-                    <button class="btn btn-primary" type="submit">Update</button>
-                </form>
-            </div>
+            <h5 class="card-title">{% trans "Edit your account" %}</h5>
+            {% crispy form %}
+        </div>
     </div>
 </div>
 {% endblock main %}
+{% block javascript %}
+<!-- <script src="{% static 'js/moment.min.js' %}"></script>
+<script src="{% static 'js/moment_vi.js' %}"></script>
+<script src="{% static 'js/tempusdominus-bootstrap-4.min.js' %}"></script> -->
+<script src="{% static 'js/datepicker.min.js' %}"></script>
+<script src="{% static 'js/datepicker.vi-VN.js' %}"></script>
+<script>
+$(function() {
+    // Add novalidate form
+    $("form").attr('novalidate', 'novalidate');
+
+    // https://tempusdominus.github.io/bootstrap-4/Usage/#bootstrap4-v5-docs
+    // $('#datetimepicker1').datetimepicker({
+    //     format: 'L',
+    // });
+
+    // https://github.com/fengyuanchen/datepicker
+    $(".datepicker").datepicker({
+        language: 'vi-VN',
+        format: 'yyyy-mm-dd',
+    });
+});
+</script>
+{% endblock javascript %}

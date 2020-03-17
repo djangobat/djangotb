@@ -44,6 +44,11 @@ SITE_ID = 1
 
 INTERNAL_IPS = ['127.0.0.1']
 
+if config("USE_DOCKER", default=False, cast=bool):
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS += [ip[:-1] + "1" for ip in ips]
+
 AUTH_USER_MODEL = 'users.CustomUser'
 
 ROOT_URLCONF = 'config.urls'
@@ -56,6 +61,18 @@ DATABASES = {
     )
 }
 
+# DATE_INPUT_FORMATS = [
+#     '%d/%m/%Y', '%d-%m-%Y',
+# ]
+
+# [
+#     '%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', # '2006-10-25', '10/25/2006', '10/25/06'
+#     '%b %d %Y', '%b %d, %Y',            # 'Oct 25 2006', 'Oct 25, 2006'
+#     '%d %b %Y', '%d %b, %Y',            # '25 Oct 2006', '25 Oct, 2006'
+#     '%B %d %Y', '%B %d, %Y',            # 'October 25 2006', 'October 25, 2006'
+#     '%d %B %Y', '%d %B, %Y',            # '25 October 2006', '25 October, 2006'
+# ]
+
 
 # ==============================================================================
 # MIDDLEWARE SETTINGS
@@ -65,6 +82,7 @@ MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -134,7 +152,7 @@ ACCOUNT_UNIQUE_EMAIL = True
 # INTERNATIONALIZATION AND LOCALIZATION SETTINGS
 # ==============================================================================
 
-LANGUAGE_CODE = config('LANGUAGE_CODE', default='en-us')
+LANGUAGE_CODE = config('LANGUAGE_CODE', default='en')
 
 TIME_ZONE = config('TIME_ZONE', default='UTC')
 
@@ -144,12 +162,23 @@ USE_L10N = True
 
 USE_TZ = True
 
+from django.utils.translation import ugettext_lazy as _
+
+LANGUAGES = (
+    ('en', _('English')),
+    ('vi', _('Vietnamese')),
+)
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale/'),
+)
+
 
 # ==============================================================================
 # EMAIL SETTINGS
 # ==============================================================================
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = config('EMAIL_BACKEND', default='django.core.mail.backends.console.EmailBackend')
 
 
 # ==============================================================================
