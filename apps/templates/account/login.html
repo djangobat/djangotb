@@ -1,24 +1,25 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% block title %}
-Đăng nhập
+{% trans 'Login' %}
 {% endblock title %}
 {% block main %}
 <div class="row">
     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
         <div class="card card-signin my-5">
             <div class="card-body">
-                <h2 class="card-title text-center">Đăng nhập</h2>
+                <h2 class="card-title text-center">{% trans 'Login' %}</h2>
                 <form novalidate method="post" action="{% url 'account_login' %}">
                     {% csrf_token %}
                     {{ form|crispy }}
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
-                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Đăng nhập</button>
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{% trans 'Login' %}</button>
                     <hr class="my-4">
-                    Nếu chưa có tài khoản <a href="{% url 'account_signup' %}">đăng ký</a>
-                    <a href="{% url 'account_reset_password' %}" class="float-right">Quên mật khẩu</a>
+                    {% trans "Don't Have an Account?" %} <a href="{% url 'account_signup' %}">{% trans 'Sign up' %}</a>
+                    <a href="{% url 'account_reset_password' %}" class="float-right">{% trans 'Forgot password?' %}</a>
                 </form>
             </div>
         </div>

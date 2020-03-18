@@ -26,6 +26,11 @@ Profile
     <div class="col-md-9">
         <div class="card-body">
             <h5 class="card-title">{% trans "Edit your account" %}</h5>
+            {% if is_valid %}
+            <div class="alert alert-success">
+                {% trans 'The information was successfully updated' %}
+            </div>
+            {% endif %}
             {% crispy form %}
         </div>
     </div>

@@ -1,7 +1,8 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% load crispy_forms_tags %}
 {% block title %}
-Đăng xuất tài khoản
+{% trans 'Log out' %}
 {% endblock title %}
 {% block main %}
 <div class="col-md-8 offset-md-2 mt-6">
@@ -9,7 +10,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-12 col-lg-6">
                 <div class="login-header mb-3">
-                    <p>Bạn có chắc muốn đăng xuất tài khoản ?</p>
+                    <p>{% trans 'Are you sure you want to log out?' %}</p>
                 </div>
                 <form action="" method="post">
                     {% csrf_token %}
@@ -17,7 +18,7 @@
                     {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                     {% endif %}
-                    <button class="btn btn-danger" type="submit">Đăng xuất</button>
+                    <button class="btn btn-danger" type="submit">{% trans 'Logout' %}</button>
                 </form>
             </div>
         </div>

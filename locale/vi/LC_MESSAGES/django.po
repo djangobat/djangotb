@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-18 10:41+0700\n"
+"POT-Creation-Date: 2020-03-18 11:20+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,59 @@ msgstr ""
 #: apps/core/urls.py:9
 msgid "about/"
 msgstr "gioi-thieu/"
+
+#: apps/templates/account/login.html:5 apps/templates/account/login.html:12
+#: apps/templates/account/login.html:19 apps/templates/account/signup.html:21
+#: apps/templates/includes/header.html:56
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: apps/templates/account/login.html:21
+msgid "Don't Have an Account?"
+msgstr "Bạn chưa có tài khoản?"
+
+#: apps/templates/account/login.html:21 apps/templates/account/signup.html:5
+#: apps/templates/account/signup.html:12 apps/templates/account/signup.html:19
+msgid "Sign up"
+msgstr "Đăng ký"
+
+#: apps/templates/account/login.html:22
+msgid "Forgot password?"
+msgstr "Quên mật khẩu?"
+
+#: apps/templates/account/logout.html:5 apps/templates/includes/header.html:52
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#: apps/templates/account/logout.html:13
+msgid "Are you sure you want to log out?"
+msgstr "Đăng xuất tài khoản của bạn?"
+
+#: apps/templates/account/logout.html:21
+msgid "Logout"
+msgstr "Đăng xuất"
+
+#: apps/templates/account/password_change.html:5
+#: apps/templates/account/password_change.html:10
+#: apps/templates/includes/header.html:50
+msgid "Change password"
+msgstr "Thay đổi mật khẩu"
+
+#: apps/templates/account/password_change.html:11
+msgid "Use the form below to change your password"
+msgstr "Dùng mẫu bên dưới để thay đổi mật khẩu"
+
+#: apps/templates/account/password_change.html:23
+msgid "Update password"
+msgstr "Thay đổi mật khẩu"
+
+#: apps/templates/account/password_change.html:25
+msgid "Home page"
+msgstr "Trang chủ"
+
+#: apps/templates/account/signup.html:21
+msgid "Already have an account?"
+msgstr "Bạn đã có tài khoản?"
 
 #: apps/templates/core/about.html:4 apps/templates/includes/header.html:17
 msgid "About"
@@ -44,23 +97,11 @@ msgstr "Trang chủ"
 
 #: apps/templates/includes/header.html:24
 msgid "Language"
-msgstr ""
+msgstr "Ngôn ngữ"
 
 #: apps/templates/includes/header.html:49
 msgid "My Account"
 msgstr "Tài khoản"
-
-#: apps/templates/includes/header.html:50
-msgid "Change password"
-msgstr "Thay đổi mật khẩu"
-
-#: apps/templates/includes/header.html:52
-msgid "Log out"
-msgstr "Đăng xuất"
-
-#: apps/templates/includes/header.html:56
-msgid "Login"
-msgstr "Đăng nhập"
 
 #: apps/templates/includes/header.html:57
 msgid "Sing Up"
@@ -70,6 +111,10 @@ msgstr "Đăng ký"
 msgid "Edit your account"
 msgstr "Chỉnh sửa thông tin"
 
+#: apps/templates/users/profile.html:31
+msgid "The information was successfully updated"
+msgstr "Cập nhật thông tin thành công"
+
 #: apps/users/forms.py:32 apps/users/models.py:7
 msgid "Birth date"
 msgstr "Ngày sinh"
@@ -77,6 +122,10 @@ msgstr "Ngày sinh"
 #: apps/users/forms.py:61
 msgid "Update"
 msgstr "Cập nhật"
+
+#: apps/users/signals.py:9
+msgid "You have Successfully changed your Password!."
+msgstr "Thay đổi mật khẩu thành công"
 
 #: apps/users/urls.py:8
 msgid "profile/"
@@ -1282,8 +1331,15 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
+#, fuzzy
+#~| msgid "Sing Up"
+#~ msgid "Sing up"
+#~ msgstr "Đăng ký"
+
+#, fuzzy
+#~| msgid "Change password"
+#~ msgid "Change you password"
+#~ msgstr "Thay đổi mật khẩu"
+
 #~ msgid "Hi, <b> %(username)s</b>"
 #~ msgstr "Xin chào, <b> %(username)s</b>"
-
-#~ msgid "The information was successfully updated"
-#~ msgstr "Cập nhật thông tin thành công"
