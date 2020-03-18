@@ -1,9 +1,10 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% block title %}
-About
+{% trans 'About' %}
 {% endblock title %}
 {% block main %}
 <div class="text-center pt-5">
-    <h1 class="display-4">About Page</h1>
+    <h1 class="display-4">{% trans 'About Page' %}</h1>
 </div>
 {% endblock main %}

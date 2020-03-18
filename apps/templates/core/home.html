@@ -1,18 +1,19 @@
 {% extends "_base.html" %}
+{% load i18n %}
 {% block title %}
 DjangoTB
 {% endblock title %}
 {% block main %}
 <div class="text-center pt-5">
-    <h1 class="display-4">Home Page</h1>
-    <p class="lead text-muted">Khởi tạo dự án Django nhanh chóng với <b>djangotb</b></p>
+    <h1 class="display-4">{% trans 'Home Page' %}</h1>
+    <p class="lead text-muted">{% trans 'Quickly and Easily Way to Create a Django Project' %} <b>djangotb</b></p>
     <p>
         <a href="http://djangobat.com/" class="btn btn-success my-2">djangobat.com</a>
         <a href="https://github.com/djangobat/djangotb" class="btn btn-secondary my-2"><i class="fab fa-github"></i> Code Github</a>
     </p>
 </div>
 <div class="bg-light p-3 mb-3">
-    <h2>Cài đặt</h2>
+    <h2>Settings</h2>
 <br>
 <h5 class="font-weight-light">Clone Repository</h5>
 <p>
@@ -21,7 +22,7 @@ DjangoTB
 <p>
     <code>$ cd djangotb</code>
 </p>
-<h5 class="font-weight-light">Cấu hình virtual enviroment</h5>
+<h5 class="font-weight-light">Virtual enviroment</h5>
 <ul class="nav nav-tabs">
     <li class="nav-item">
         <a class="nav-link active" data-toggle="tab" href="#windows"><i class="fab fa-windows"></i> Windows</a>
@@ -68,18 +69,18 @@ DjangoTB
         </p>
     </div>
 </div>
-<h5 class="font-weight-light">Khởi tạo migration của custom user</h5>
+<h5 class="font-weight-light">Set up the initial migration</h5>
 <p>
     <code>(env) $ python manage.py makemigrations users</code>
 </p>
 <p>
     <code>(env) $ python manage.py migrate</code>
 </p>
-<h5 class="font-weight-light">Tạo superuser</h5>
+<h5 class="font-weight-light">Create a superuser</h5>
 <p>
     <code>(env) $ python manage.py createsuperuser</code>
 </p>
-<h5 class="font-weight-light">Chạy server development</h5>
+<h5 class="font-weight-light">Run server development</h5>
 <p>
     <code>(env) $ python manage.py runserver</code>
 </p>

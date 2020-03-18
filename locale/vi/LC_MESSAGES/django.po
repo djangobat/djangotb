@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 23:33+0700\n"
+"POT-Creation-Date: 2020-03-18 10:41+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps/core/urls.py:9
+msgid "about/"
+msgstr "gioi-thieu/"
+
+#: apps/templates/core/about.html:4 apps/templates/includes/header.html:17
+msgid "About"
+msgstr "Giới thiệu"
+
+#: apps/templates/core/about.html:8
+msgid "About Page"
+msgstr "Giới thiệu"
+
+#: apps/templates/core/home.html:8
+msgid "Home Page"
+msgstr "Trang chủ"
+
+#: apps/templates/core/home.html:9
+msgid "Quickly and Easily Way to Create a Django Project"
+msgstr "Khởi tạo dự án Django nhanh chóng"
+
+#: apps/templates/includes/header.html:14
+msgid "Home"
+msgstr "Trang chủ"
+
+#: apps/templates/includes/header.html:24
+msgid "Language"
+msgstr ""
+
+#: apps/templates/includes/header.html:49
+msgid "My Account"
+msgstr "Tài khoản"
+
+#: apps/templates/includes/header.html:50
+msgid "Change password"
+msgstr "Thay đổi mật khẩu"
+
+#: apps/templates/includes/header.html:52
+msgid "Log out"
+msgstr "Đăng xuất"
+
+#: apps/templates/includes/header.html:56
+msgid "Login"
+msgstr "Đăng nhập"
+
+#: apps/templates/includes/header.html:57
+msgid "Sing Up"
+msgstr "Đăng ký"
 
 #: apps/templates/users/profile.html:28
 msgid "Edit your account"
@@ -30,11 +78,15 @@ msgstr "Ngày sinh"
 msgid "Update"
 msgstr "Cập nhật"
 
-#: config/settings.py:156
+#: apps/users/urls.py:8
+msgid "profile/"
+msgstr ""
+
+#: config/settings.py:168
 msgid "English"
 msgstr "Tiếng Anh"
 
-#: config/settings.py:157
+#: config/settings.py:169
 msgid "Vietnamese"
 msgstr "Tiếng việt"
 
@@ -1229,6 +1281,9 @@ msgstr ""
 #: env/lib/python3.6/site-packages/django/views/templates/default_urlconf.html:409
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Hi, <b> %(username)s</b>"
+#~ msgstr "Xin chào, <b> %(username)s</b>"
 
 #~ msgid "The information was successfully updated"
 #~ msgstr "Cập nhật thông tin thành công"

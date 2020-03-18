@@ -16,6 +16,7 @@ For detail: [BLOG](https://djangobat.com/blog/khoi-tao-ung-dung-django-nhanh-cho
 * Dùng Email/password cho đăng ký và đăng nhập;
 * Cập nhật Profile;
 * Lưu trữ cấu hình ở file settings.py tăng tính bảo mật
+* Hỗ trợ nhiều ngôn ngữ tiếng việt và tiếng anh
 
 ## Third-Party Packages
 
